@@ -1,6 +1,6 @@
 ---
 layout: home
-title: PhoneGap Day US Push Workshop
+title: PhoneGap Day EU Push Workshop
 ---
 
 ## What You Will Build
