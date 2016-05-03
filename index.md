@@ -4,7 +4,7 @@ title: PhoneGap Day EU Push Workshop
 ---
 
 ## What You Will Build
-In this workshop you will learn how to create a simple mobile application using PhoneGap with HTML, JavaScript and CSS. We'll go over a the ways to handle incoming push notifications to provide a native experience.
+In this workshop you will learn how to add push notification functionality to an existing PhoneGap application. We'll go over a the ways to handle incoming push notifications to provide a native experience.
 
 <img class="screenshot" src="images/push1.png"/>
 <img class="screenshot" src="images/push2.png"/>
@@ -14,29 +14,29 @@ In this workshop you will learn how to create a simple mobile application using 
 
 - How to handle specific notification types such as foreground push, background push, action buttons, redirecting to a specific page in your app.
 
-- How to use several PhoneGap APIs via plugins
-
 ## Pre-requisites
+
+- [PhoneGap CLI](http://docs.phonegap.com/getting-started/1-install-phonegap/cli/) version 6.2.0 or greater.
 
 ### Android Pre-requisites
 
-- Google Cloud Messaging Project ID
-- Google Cloud Messaging API Key for above Project ID (need for server)
+- [PhoneGap Developer App from the Play Store](https://play.google.com/store/apps/details?id=com.adobe.phonegap.app)
 
 ### iOS Pre-requisites
 
-- App ID configured for Push Notifications on Apple Developer Portal
-- SSL Certificate and private key (need for server)
+- [PhoneGap Developer App from the App Store](https://itunes.apple.com/ca/app/phonegap-developer/id843536693?mt=8)
 
 ## Requirements
 
 - A working knowledge of HTML and JavaScript is assumed, but you don't need to be a JavaScript guru.
-
 - To complete this workshop, all you need is a code editor, an Android or iOS device, and a connection to the Internet.
 
 >A mobile device **is** a requirement for this tutorial. The iOS simulator does not support push notifications and the less said about the Android emulator the better.
 
 ## Useful Resources
+
+You will not need to setup your own Google App Project or Apple Developer Certificates for this workshop. We will be using the **PhoneGap Developer App** to receive the push notifications. Later if you want to add push to your application here are some helpful links.
+
 1. [GCM Project Creation](http://docs.urbanairship.com/reference/push-providers/gcm.html) - a guide from Urban Airship on setting up a project with GCM enabled.
 2. [Apple Push Configuration](http://docs.urbanairship.com/reference/push-providers/apns.html) - a guide from Urban Airship on creating the certificate and permission files to enable APNS.
 
