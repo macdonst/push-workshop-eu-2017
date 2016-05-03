@@ -1,5 +1,5 @@
 # Push Workshop PhoneGap App
-PhoneGap Day US workshop - Simple mobile application built showing how to handle various push notification services.
+PhoneGap Day US 2016 workshop - Simple mobile application built showing how to handle various push notifications.
 
 ### [Workshop Guide with Step by Step Modules](http://macdonst.github.io/push-workshop)
 
