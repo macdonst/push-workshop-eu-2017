@@ -4,40 +4,37 @@ title: Module 1&#58; Setup the project
 ---
 
 ### Create a new Project
-1. Create a PhoneGap project using either the PhoneGap CLI or the PhoneGap Desktop Application. For example:
+1. Create a PhoneGap project using the PhoneGap CLI. For example:
 
-        phonegap create pgpush com.yourname.workshop.push PGPush
+        $ phonegap create pgpush --template phonegap-app-star-track
+
+   We'll be using the `phonegap-app-star-track` project as our template to provide base functionality.
 
 2. Navigate into the newly created project folder:
 
-        cd pgpush
-
-### Replace Contents
-1. The final application project we'll be using is located [here](https://github.com/macdonst/push-workshop). It contains a **solutions** folder with the completed step by step lesson to reference. If you want to work along, copy the contents or
-download the [zip file for the project](https://github.com/macdonst/push-workshop/archive/master.zip) or clone it with git:
-
-        git clone https://github.com/macdonst/push-workshop
-
-1. Now copy the **solutions/www1**, **config.xml** and **pg-wings.png** files from the push-workshop project into your newly created project root and overwrite the default files currently there.
-
-   > The **config.xml** file has some settings which will automatically install the project plugin dependencies, but you could optionally add them manually. The **pg-wings.png** is the default icon for this application referenced in config.xml.
+        $ cd pgpush
 
 
 ### Run the Initial Application
-1. Run the app using the PhoneGap CLI:
+1. Serve the app using the PhoneGap CLI. Type `$ phonegap serve`. You will receive the server address the app is being hosted on in the output received in the console (`192.168.1.11:3000` in this example):
 
-   - **From the PhoneGap CLI:** those with proper local setup can run on device with PhoneGap CLI with one of the following:
+		$ phonegap serve
+		[phonegap] starting app server...
+		[phonegap] listening on 192.168.1.11:3000
+		[phonegap]
+		[phonegap] ctrl-c to stop the server
+		[phonegap]
 
-            $ phonegap run ios
-            $ phonegap run ios --device
-            $ phonegap run android             
-            $ phonegap run android --device               
+2. Now go to your mobile device where the PhoneGap Developer App is running, enter the server address on the main screen and tap **Connect**.
 
-      > This option requires a mobile SDK setup. If you have Mac and Xcode you should be able to use iOS, but Android requires [additional SDK installation and setup](http://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html).
+    <img class="screenshot-lg" src="images/dev-app-enter-add.png"/>
 
-2. Ensure you see the application load with and you receive a `deviceready` event.
+  > Tap directly on the server address displayed in the terminal screen of the PhoneGap Developer app to change it to match yours. The value filled in by default is only a sample.
 
-    <img class="screenshot-lg" src="images/main-view.png"/>
+ You should see the connection occur followed by a success message as shown below. If you receive an error of any kind, ensure
+ once again that you are connected to the same network on both your  and computer.
+
+  <img class="screenshot-lg" src="images/main-view.png"/>
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
