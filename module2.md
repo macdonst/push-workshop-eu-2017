@@ -7,48 +7,57 @@ title: Module 2&#58; Obtaining a Registration ID
 In order for your device to receive push notifications you will need to receive a registration ID from the remote push service be it Google Cloud Messaging (GCM) or Apple Push Notification Service (APNS). We'll learn how to register for push and report that registration ID back to our application server.
 
 ## Steps
-1. Initialize the PushNotification plugin and register an event handler for a `registration` event. Open the **www/js/index.js** file
-and add the following into the `deviceready` handling section, **Note:** if you are testing with Android you will need to modify the `senderID` property to match yours.
+1. Initialize the PushNotification plugin and register an event handler for a `registration` event. Open the **www/js/my-app.js** file
+and add the following function to the end of the file:
 
-        app.push = PushNotification.init({
-            "android": {
-                "senderID": "Your GCM ID"
-            },
-            "ios": {
-              "sound": true,
-              "vibration": true,
-              "badge": true
-            },
-            "windows": {}
-        });
+        function setupPush() {
+          var push = PushNotification.init({
+              "android": {
+                  "senderID": "XXXXXXXX"
+              },
+              "ios": {
+                "sound": true,
+                "vibration": true,
+                "badge": true
+              },
+              "windows": {}
+          });
 
-        app.push.on('registration', function(data) {
-            console.log("registration event: " + data.registrationId);
-            document.getElementById("regId").innerHTML = data.registrationId;
-            var oldRegId = localStorage.getItem('registrationId');
-            if (oldRegId !== data.registrationId) {
-                // Save new registration ID
-                localStorage.setItem('registrationId', data.registrationId);
-                // Post registrationId to your app server as the value has changed
-            }
-        });
+          push.on('registration', function(data) {
+              console.log("registration event: " + data.registrationId);
+              var oldRegId = localStorage.getItem('registrationId');
+              if (oldRegId !== data.registrationId) {
+                  // Save new registration ID
+                  localStorage.setItem('registrationId', data.registrationId);
+                  // Post registrationId to your app server as the value has changed
+              }
+          });
 
-        app.push.on('error', function(e) {
-            console.log("push error = " + e.message);
-        });
+          push.on('error', function(e) {
+              console.log("push error = " + e.message);
+          });
+        }
 
    > You may be wondering why we are checking the registration ID against one we saved in local storage. Basically, Apple or Google may refresh your registration ID so it always pays to see if the ID has changed. You can use this opportunity to remove an old ID from your app server and add the new ID.
 
-2. Run the app using the PhoneGap CLI:
+2. Next in the **www/js/my-app.js** file, find the `deviceready` handling section and modify it so it calls our `setupPush` method.
 
-            $ phonegap run ios
-            $ phonegap run ios --device
-            $ phonegap run android             
-            $ phonegap run android --device               
+        $$(document).on('deviceready', function deviceIsReady() {
+          console.log('Device is ready!');
+          setupPush();
+        });
 
-and once the device receives a registration event the application will look a like this:
+3. Next refresh the application by using the [four finger tap gesture](http://docs.phonegap.com/references/developer-app/gestures/). Once your app reloads, if this is the first time you are requesting the ability to receive push notifications on iOS you will see the following dialog. Please click the `OK` button.
+    <img class="screenshot-lg" src="images/push-permission.png"/>
 
-<img class="screenshot-lg" src="images/push1.png"/>
+
+   > If you are running on Android or have already given permission to the app to use push notifications then you will not see this dialog.
+
+4. Finally, you will see the registration ID in your terminal session.
+
+        [phonegap] [console.log] registration event: APA91bE1MmeTc92igNoi5OkDWUV
+
+   > Obviously, your registration ID will be different but you get the picture.
 
 ## Useful Resources
 1. [Apache Cordova and Remote Debugging on Android](http://geeklearning.io/apache-cordova-and-remote-debugging-on-android/) - a quick tutorial on how to setup your phone to allow remote debugging with Chrome Web Inspector.
@@ -59,9 +68,9 @@ and once the device receives a registration event the application will look a li
 
    [PhoneGap Push Plugin](https://github.com/phonegap/phonegap-plugin-push)
 
-    $ phonegap plugin add phonegap-plugin-push
+    $ phonegap plugin add phonegap-plugin-push --variable SENDER_ID=XXXXXXXX
 
-   >You won't need to specifically add it for this workshop if you used the project repo **config.xml**. If you are creating the project from scratch and using the CLI locally then use the command above.
+   >You won't need to specifically add it for this workshop as it is already included in the **PhoneGap Developer App**. If you are creating the project from scratch and using the CLI locally then use the command above.
 
 
 
