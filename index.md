@@ -16,7 +16,7 @@ In this workshop you will learn how to add push notification functionality to an
 
 ## Pre-requisites
 
-- [PhoneGap CLI](http://docs.phonegap.com/getting-started/1-install-phonegap/cli/) version 6.2.0 or greater.
+- [PhoneGap CLI](http://docs.phonegap.com/getting-started/1-install-phonegap/cli/) version 6.2.2 or greater.
 
 ### Android Pre-requisites
 
