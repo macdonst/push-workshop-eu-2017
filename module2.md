@@ -13,7 +13,7 @@ and add the following function to the end of the file:
         function setupPush() {
           var push = PushNotification.init({
               "android": {
-                  "senderID": "XXXXXXXX"
+                  "senderID": "85075801930"
               },
               "ios": {
                 "sound": true,
