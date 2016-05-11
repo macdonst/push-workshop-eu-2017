@@ -7,88 +7,60 @@ title: Module 5&#58; Background Notifications
 In this lesson we'll learn how to have our notification handler run when the app is not in the foreground and without user interaction. As we mentioned in lesson 3 the notification handler is only run when the application is in the foreground or if the user taps the received notification but there is a way to signal your app to run code in the background. This is a very powerful technique which allows you to keep your app up to date.
 
 ## Steps
-1. Open a remote debugging session with your application (uses the resources from lesson 2).
+1. With your app in the foreground send yourself a push message using the command we used in lesson 4. You will notice that besides the alert dialog, that in the console of our terminal running `phonegap serve` you will see the following output:
 
-   <img class="screenshot" src="images/debug-chrome.png"/>
-   <img class="screenshot" src="images/debug-safari.png"/>
+        [phonegap] [console.log] notification event
 
-2. With your app in the foreground send yourself a push message using the script we worked on in lesson 4. You will notice that besides the UI of the app being updated that in the console of our debugger you will see the following output:
-
-        notification event
-
-3. Now put your app in the background and send another push message. You should see the message arrive in the shade area but notice there was no additional logs in the console of your debugger.
+2. Now put your app in the background and send another push message. You should see the message arrive in the shade area but notice there was no additional logs in the terminal running `phonegap serve`.
 
    <img class="screenshot" src="images/push2.png"/>
    <img class="screenshot" src="images/push2-ios.png"/>
 
-4. Click on the notification, your app should open, the UI will be updated and you'll see a new line in the console of the debugger.
+3. Click on the notification, your app should open, the alert dialog will be shown and you'll see a new line in the terminal running `phonegap serve`.
 
    > But what we really want is for the notification event to be delivered to our application even when it is in the background
 
-5. Open **www/js/index.js** and add replace the current push notification handler:
+4. Open **www/js/my-app.js** and add replace the current push notification handler:
 
-        app.push.on('notification', function(data) {
-            console.log('notification event');
-            var cards = document.getElementById("cards");
-            var push = '<div class="row">' +
-              '<div class="col s12 m6">' +
-              '  <div class="card darken-1">' +
-              '    <div class="card-content black-text">' +
-              '      <span class="card-title black-text">' + data.title + '</span>' +
-              '      <p>' + data.message + '</p>' +
-              '      <p>' + data.additionalData.foreground + '</p>' +
-              '    </div>' +
-              '  </div>' +
-              ' </div>' +
-              '</div>';
-            cards.innerHTML += push;
+            push.on('notification', function(data) {
+                console.log('notification event');
+                navigator.notification.alert(
+                    data.message,         // message
+                    null,                 // callback
+                    data.title,           // title
+                    'Ok'                  // buttonName
+                );
 
-            app.push.finish(function() {
-                console.log('success');
-            }, function() {
-                console.log('error');
+                app.push.finish(function() {
+                    console.log('success');
+                }, function() {
+                    console.log('error');
+                });
             });
-        });
 
    > Strictly speaking the call to `finish` is only required on iOS. It is a no-op on other platforms. The reason we need to do this on iOS is the OS only provides you with 30 seconds of background processing and we need to tell the OS we are done. Failure to do this may cause the OS to kill your app for mis-behaving.
 
-6. Run the app using the PhoneGap CLI:
+5. Next refresh the application by using the [four finger tap gesture](http://docs.phonegap.com/references/developer-app/gestures/).
 
-           $ phonegap run ios
-           $ phonegap run ios --device
-           $ phonegap run android  
-           $ phonegap run android --device               
+6. Put your app into the background by pressing the home button.
 
-7. Re-establish your debugging session.
+7. Now we'll need to modify our push command slightly to inform the device we want to do some background processing.
 
-8. Now put your app into the background by pressing the home button.
+   **For Android**            
 
-9. Now we'll need to modify our push scripts to inform the device we want to do some background processing.
+        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service gcm --payload '{ "data": { "title": "Hello", "message": "World", "content-available": "1"} }'
 
-   - **For Android**            
-     1. Open **server/gcmService.js**
-     2. After the lines that add the title and body to your notification add the following line:
+   **For iOS**            
 
-            message.addData('content-available', '1');
+        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service apns --payload '{ "aps": { "alert": { "title": "Hello", "body": "World", "content-available": 1 } }'
 
-     3. Run `node gcmServer.js`
+8. As well as the notification appearing in your shade you should see the line:
 
+        [phonegap] [console.log] notification event
 
-   - **For iOS**            
-     1. Open **server/apnsService.js**
-     2. After the line that sets `note.alert` add the following line:
+    in the terminal running `phonegap serve`.
 
-            note.contentAvailable = 1;
-
-     3. Run `node apnsServer.js`
-
-10. As well as the notification appearing in your shade you should see the line:
-
-        notification event
-
-    in the debugger console.
-
-11. Now start your app, not by clicking the push notification, instead launch the app from the app drawer. When the app starts up you'll notice the UI has already been updated with the data from the new push.
+9. Now start your app, not by clicking the push notification, instead launch the app from the app drawer. When the app starts up you'll notice the alert dialog has already been triggered based on data from the new push.
 
 ## Discussion
 
