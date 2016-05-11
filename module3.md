@@ -7,7 +7,7 @@ title: Module 3&#58; Handling your first notification
 Now that we have a registration ID we are now ready to receive our push notification in our app. In this case we'll setup our application to show a dialog when a push notification is received.
 
 ## Steps
-1. Open **www/js/index.js** and add the following code after the push error handler in `setupPush`:
+1. Open **www/js/my-app.js** and add the following code after the push error handler in `setupPush`:
 
             push.on('notification', function(data) {
                 console.log('notification event');
