@@ -47,15 +47,15 @@ In this lesson we'll learn how to launch to a specific location in your applicat
 
    **For Android**       
 
-     phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service gcm --payload '{ "data": { "title": "Hello", "message": "World", "url": "cats"  } }'
+      phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service gcm --payload '{ "data": { "title": "New Music", "message": "The Foo Fighters have released a new album", "artist": "Foo Fighters" } }'
 
    **For iOS**            
 
-     phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service apns --payload '{ "aps": { "alert": { "title": "Hello", "body": "World" }, "url": "cats" }'
+      phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service apns --payload '{ "aps": { "alert": { "title": "New Music", "body": "The Foo Fighters have released a new album" }, "artist": "Foo Fighters" }'
 
 6. You should see the message arrive in the shade area just like before.
 
-    <img class="screenshot" src="images/push2.png"/>
+    <img class="screenshot" src="images/push8.png"/>
     <img class="screenshot" src="images/push2-ios.png"/>
 
 7. Now click on the notification and when your app opens you should see the following:
