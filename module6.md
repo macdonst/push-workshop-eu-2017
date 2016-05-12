@@ -39,11 +39,11 @@ This lesson will take you through the steps required in order to setup "action b
 
 
         function playMusic() {
-          alert("Accepted");
+          alert("Play Music!");
         }
 
         function archive() {
-          alert("Rejection!");
+          alert("Archived!");
         }
 
 3. Next refresh the application by using the [four finger tap gesture](http://docs.phonegap.com/references/developer-app/gestures/).

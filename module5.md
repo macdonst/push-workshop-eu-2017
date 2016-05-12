@@ -31,7 +31,7 @@ In this lesson we'll learn how to have our notification handler run when the app
                     'Ok'                  // buttonName
                 );
 
-                app.push.finish(function() {
+                push.finish(function() {
                     console.log('success');
                 }, function() {
                     console.log('error');
