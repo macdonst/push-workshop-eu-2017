@@ -58,7 +58,7 @@ This lesson will take you through the steps required in order to setup "action b
 
    **For iOS**            
 
-        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service apns --payload '{ "aps": { "alert": { "title": "New Music", "message": "New music from the Foo Fighters" }, "category": "newmusic" }'
+        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service apns --payload '{ "aps": { "alert": { "title": "New Music", "message": "New music from the Foo Fighters" }, "category": "newmusic" } }'
 
    This should produce the following push notifications. On Android you may have to swipe down on the notification to reveal the buttons while on iOS you'll need to swipe down or swipe left on the notification to reveal the buttons depending on where you are viewing the notification.
 
