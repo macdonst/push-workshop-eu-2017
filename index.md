@@ -42,7 +42,7 @@ You will not need to setup your own Google App Project or Apple Developer Certif
 
 ## Issues/Feedback
 
-- Please create an issue [here](https://github.com/macdonst/push-workshop/issues) if you run
+- Please create an issue [here](https://github.com/macdonst/push-workshop-eu/issues) if you run
 into any problems or if you have feedback.
 
 - You can contact me on Twitter:
