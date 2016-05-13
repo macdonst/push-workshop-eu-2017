@@ -56,7 +56,7 @@ In this lesson we'll learn how to launch to a specific location in your applicat
 6. You should see the message arrive in the shade area just like before.
 
     <img class="screenshot" src="images/push8.png"/>
-    <img class="screenshot" src="images/push2-ios.png"/>
+    <img class="screenshot" src="images/push8-ios.png"/>
 
 7. Now click on the notification and when your app opens you should see the following:
 

@@ -15,7 +15,7 @@ This lesson will take you through the steps required in order to setup "action b
             },
             "ios": {
               "sound": true,
-              "vibration": true,
+              "alert": true,
               "badge": true,
               "categories": {
                 "newmusic": {

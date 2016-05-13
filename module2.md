@@ -17,7 +17,7 @@ and add the following function to the end of the file:
               },
               "ios": {
                 "sound": true,
-                "vibration": true,
+                "alert": true,
                 "badge": true
               },
               "windows": {}
