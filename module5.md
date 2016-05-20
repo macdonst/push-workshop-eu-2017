@@ -52,7 +52,7 @@ In this lesson we'll learn how to have our notification handler run when the app
 
    **For iOS**            
 
-        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service apns --payload '{ "aps": { "alert": { "title": "Hello", "body": "World", "content-available": 1 } } }'
+        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service apns --payload '{ "aps": { "alert": { "title": "Hello", "body": "World" }, "content-available": 1 } }'
 
 8. As well as the notification appearing in your shade you should see the line:
 
