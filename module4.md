@@ -19,7 +19,7 @@ Now that we have an app that is able to receive push notifications we have to ha
 
    If you are on a iOS device you will run the following command to send your test push:
 
-    phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service apns --payload '{ "aps": { "alert": { "title": "Hello", "body": "World" } }'
+    phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service apns --payload '{ "aps": { "alert": { "title": "Hello", "body": "World" } } }'
 
 
 <img class="screenshot" src="images/push2-ios.png"/>
