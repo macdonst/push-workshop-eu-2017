@@ -11,15 +11,26 @@ Now that we have an app that is able to receive push notifications we have to ha
 
 2. If you are on Android device you will run the following command to send your test push:
 
+   Mac Terminal:
+
         phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service gcm --payload '{ "data": { "title": "Hello", "message": "World"} }'
 
+   Windows CMD Prompt:
+
+        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service gcm --payload "{ \"data\":{ \"title\": \"Hello\", \"message\": \"World\"} }"
 
 <img class="screenshot" src="images/push2.png"/>
 <img class="screenshot" src="images/push3.png"/>
 
    If you are on a iOS device you will run the following command to send your test push:
 
+   Mac Terminal:
+
     phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service apns --payload '{ "aps": { "alert": { "title": "Hello", "body": "World" } } }'
+
+   Windows CMD Prompt:
+
+    phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service apns --payload "{ \"aps\": { \"alert\": { \"title\": \"Hello\", \"body\": \"World\" } } }"
 
 
 <img class="screenshot" src="images/push2-ios.png"/>

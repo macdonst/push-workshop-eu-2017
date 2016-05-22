@@ -46,13 +46,25 @@ In this lesson we'll learn how to have our notification handler run when the app
 
 7. Now we'll need to modify our push command slightly to inform the device we want to do some background processing.
 
-   **For Android**            
+   **For Android**
+
+    Mac Terminal:          
 
         phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service gcm --payload '{ "data": { "title": "Hello", "message": "World", "content-available": "1"} }'
 
-   **For iOS**            
+    Windows CMD Prompt:
+
+        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service gcm --payload "{ \"data\":{ \"title\": \"Hello\", \"message\": \"World\", \"content-available\": \"1\" } }"
+
+   **For iOS**  
+   
+    Mac Terminal:          
 
         phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service apns --payload '{ "aps": { "alert": { "title": "Hello", "body": "World" }, "content-available": 1 } }'
+
+    Windows CMD Prompt:
+
+        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service apns --payload "{ \"aps\": { \"alert\": { \"title\": \"Hello\", \"body\": \"World\" }, \"content-available\": 1 } }"
 
 8. As well as the notification appearing in your shade you should see the line:
 
