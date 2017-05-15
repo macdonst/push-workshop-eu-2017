@@ -18,6 +18,10 @@ In this workshop you will learn how to add push notification functionality to an
 
 - [PhoneGap CLI](http://docs.phonegap.com/getting-started/1-install-phonegap/cli/) version 6.2.2 or greater.
 
+## Browser
+
+- [Chrome](https://www.google.com/chrome/)  version 42 or greater.
+
 ### Android Pre-requisites
 
 - [PhoneGap Developer App from the Play Store](https://play.google.com/store/apps/details?id=com.adobe.phonegap.app)
@@ -31,7 +35,7 @@ In this workshop you will learn how to add push notification functionality to an
 - A working knowledge of HTML and JavaScript is assumed, but you don't need to be a JavaScript guru.
 - To complete this workshop, all you need is a code editor, an Android or iOS device, and a connection to the Internet.
 
->A mobile device **is** a requirement for this tutorial. The iOS simulator does not support push notifications and the less said about the Android emulator the better.
+>A mobile device is **not** a requirement for this tutorial. We will be doing most of the work in the browser. **Note:** The iOS simulator does not support push notifications and the less said about the Android emulator the better.
 
 ## Useful Resources
 
@@ -42,7 +46,7 @@ You will not need to setup your own Google App Project or Apple Developer Certif
 
 ## Issues/Feedback
 
-- Please create an issue [here](https://github.com/macdonst/push-workshop-eu/issues) if you run
+- Please create an issue [here](https://github.com/macdonst/push-workshop-eu-2017/issues) if you run
 into any problems or if you have feedback.
 
 - You can contact me on Twitter:
