@@ -15,6 +15,7 @@ and add the following function to the end of the file:
               "android": {
                   "senderID": "XXXXXXXX"
               },
+              "browser": {},
               "ios": {
                 "sound": true,
                 "alert": true,
