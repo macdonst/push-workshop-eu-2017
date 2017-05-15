@@ -13,6 +13,7 @@ This lesson will take you through the steps required in order to setup "action b
             "android": {
                 "senderID": "Your GCM ID"
             },
+            "browser": {},
             "ios": {
               "sound": true,
               "alert": true,
@@ -39,11 +40,11 @@ This lesson will take you through the steps required in order to setup "action b
 
 
         function playMusic() {
-          alert("Play Music!");
+          myApp.alert("Play Music!");
         }
 
         function archive() {
-          alert("Archived!");
+          myApp.alert("Archived!");
         }
 
 3. Next refresh the application by using the [four finger tap gesture](http://docs.phonegap.com/references/developer-app/gestures/).
