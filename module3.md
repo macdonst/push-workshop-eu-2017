@@ -11,12 +11,8 @@ Now that we have a registration ID we are now ready to receive our push notifica
 
             push.on('notification', function(data) {
                 console.log('notification event');
-                navigator.notification.alert(
-                    data.message,         // message
-                    null,                 // callback
-                    data.title,           // title
-                    'Ok'                  // buttonName
-                );
+                // using Framework7 to show a dialog
+                myApp.alert(data.message, [data.title]);
             });
 
 2. Next refresh the application by using the [four finger tap gesture](http://docs.phonegap.com/references/developer-app/gestures/).

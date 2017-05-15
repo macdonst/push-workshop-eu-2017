@@ -15,12 +15,8 @@ In this lesson we'll learn how to launch to a specific location in your applicat
             if (artist) {
               showArtist(artist);
             } else {
-              navigator.notification.alert(
-                  data.message,         // message
-                  null,                 // callback
-                  data.title,           // title
-                  'Ok'                  // buttonName
-              );         
+              // using Framework7 to show a dialog
+              myApp.alert(data.message, [data.title]);
             }
 
             push.finish(function() {
@@ -85,27 +81,20 @@ In this lesson we'll learn how to launch to a specific location in your applicat
             console.log('notification event');
             var artist = data.additionalData.artist;
             if (artist) {
-              if (data.additionalData.foreground) {
-                navigator.notification.confirm(
-                  'Do you want to check out some new music from ' + artist + '?',
-                  function(buttonIndex) {
-                    if (buttonIndex === 1) {
-                      showArtist(artist);
-                    }
+              if (data.additionalData.foreground !== 'undefined' || data.additionalData.foreground) {
+                myApp.confirm('Do you want to check out some new music from ' + artist + '?', 'New Music',
+                  function () {
+                    showArtist(artist);
                   },
-                 'New Music',
-                 ['Yes','No']
-               );
+                  function () {
+                    console.log('nope');
+                  }
+                );
               } else {
                 showArtist(artist);
               }
             } else {
-              navigator.notification.alert(
-                  data.message,         // message
-                  null,                 // callback
-                  data.title,           // title
-                  'Ok'                  // buttonName
-              );         
+              myApp.alert(data.message, [data.title]);
             }
 
             push.finish(function() {

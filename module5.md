@@ -24,12 +24,8 @@ In this lesson we'll learn how to have our notification handler run when the app
 
             push.on('notification', function(data) {
                 console.log('notification event');
-                navigator.notification.alert(
-                    data.message,         // message
-                    null,                 // callback
-                    data.title,           // title
-                    'Ok'                  // buttonName
-                );
+                // using Framework7 to show a dialog
+                myApp.alert(data.message, [data.title]);
 
                 push.finish(function() {
                     console.log('success');
@@ -57,7 +53,7 @@ In this lesson we'll learn how to have our notification handler run when the app
         phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service gcm --payload "{ \"data\":{ \"title\": \"Hello\", \"message\": \"World\", \"content-available\": \"1\" } }"
 
    **For iOS**  
-   
+
     Mac Terminal:          
 
         phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service apns --payload '{ "aps": { "alert": { "title": "Hello", "body": "World" }, "content-available": 1 } }'
