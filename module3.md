@@ -33,14 +33,6 @@ If your app is in the background then the notification will live in the shade an
 > It's very important to note that your notification handler does not **normally** run when your app is in the background. We'll discuss how to modify your app when it is in the background in a later module.
 
 
-### Dependencies
-
-   [Apache Cordova Dialog Plugin](https://github.com/apache/cordova-plugin-dialogs)
-
-    $ phonegap plugin add cordova-plugin-dialogs
-
-   >You won't need to specifically add it for this workshop as it is already included in the **PhoneGap Developer App**. If you are creating the project from scratch and using the CLI locally then use the command above.
-
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
 <a href="module2.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
