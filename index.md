@@ -41,6 +41,7 @@ In this workshop you will learn how to add push notification functionality to an
 
 You will not need to setup your own Google App Project or Apple Developer Certificates for this workshop. We will be using the **PhoneGap Developer App** to receive the push notifications. Later if you want to add push to your application here are some helpful links.
 
+1. [FCM Project Creation](https://docs.pivotal.io/push/1-7/fcm.html#prep) - a guide from Pivotal on setting up a project with FCM enabled.
 1. [GCM Project Creation](http://docs.urbanairship.com/reference/push-providers/gcm.html) - a guide from Urban Airship on setting up a project with GCM enabled.
 2. [Apple Push Configuration](http://docs.urbanairship.com/reference/push-providers/apns.html) - a guide from Urban Airship on creating the certificate and permission files to enable APNS.
 

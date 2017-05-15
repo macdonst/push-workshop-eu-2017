@@ -46,11 +46,11 @@ In this lesson we'll learn how to have our notification handler run when the app
 
     Mac Terminal:          
 
-        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service gcm --payload '{ "data": { "title": "Hello", "message": "World", "content-available": "1"} }'
+        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service fcm --payload '{ "data": { "title": "Hello", "message": "World", "content-available": "1"} }'
 
     Windows CMD Prompt:
 
-        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service gcm --payload "{ \"data\":{ \"title\": \"Hello\", \"message\": \"World\", \"content-available\": \"1\" } }"
+        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service fcm --payload "{ \"data\":{ \"title\": \"Hello\", \"message\": \"World\", \"content-available\": \"1\" } }"
 
    **For iOS**  
 

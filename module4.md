@@ -13,11 +13,11 @@ Now that we have an app that is able to receive push notifications we have to ha
 
    Mac Terminal:
 
-        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service gcm --payload '{ "data": { "title": "Hello", "message": "World"} }'
+        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service fcm --payload '{ "data": { "title": "Hello", "message": "World"} }'
 
    Windows CMD Prompt:
 
-        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service gcm --payload "{ \"data\":{ \"title\": \"Hello\", \"message\": \"World\"} }"
+        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service fcm --payload "{ \"data\":{ \"title\": \"Hello\", \"message\": \"World\"} }"
 
 <img class="screenshot" src="images/push2.png"/>
 <img class="screenshot" src="images/push3.png"/>

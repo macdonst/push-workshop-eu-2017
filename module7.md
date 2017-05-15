@@ -45,11 +45,11 @@ In this lesson we'll learn how to launch to a specific location in your applicat
 
     Mac Terminal:          
 
-        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service gcm --payload '{ "data": { "title": "New Music", "message": "The Foo Fighters have released a new album", "artist": "Foo Fighters" } }'
+        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service fcm --payload '{ "data": { "title": "New Music", "message": "The Foo Fighters have released a new album", "artist": "Foo Fighters" } }'
 
     Windows CMD Prompt:
 
-        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service gcm --payload '{ "data": { "title": "New Music", "message": "The Foo Fighters have released a new album", "artist": "Foo Fighters" } }'
+        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service fcm --payload '{ "data": { "title": "New Music", "message": "The Foo Fighters have released a new album", "artist": "Foo Fighters" } }'
 
    **For iOS**            
 

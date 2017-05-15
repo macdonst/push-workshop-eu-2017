@@ -55,11 +55,11 @@ This lesson will take you through the steps required in order to setup "action b
 
     Mac Terminal:          
 
-        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service gcm --payload '{ "data": { "title": "New Music", "message": "New music from the Foo Fighters", "actions": [{ "icon": "play", "title": "Play Music", "callback": "playMusic"}, { "icon": "archive", "title": "Archive", "callback": "archive"} ] } }'
+        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service fcm --payload '{ "data": { "title": "New Music", "message": "New music from the Foo Fighters", "actions": [{ "icon": "play", "title": "Play Music", "callback": "playMusic"}, { "icon": "archive", "title": "Archive", "callback": "archive"} ] } }'
 
     Windows CMD Prompt:
 
-        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service gcm --payload "{ \"data\": { \"title\": \"New Music\", \"message\": \"New music from the Foo Fighters\", \"actions\": [{ \"icon\": \"play\", \"title\": \"Play Music\", \"callback\": \"playMusic\"}, { \"icon\": \"archive\", \"title\": \"Archive\", \"callback\": \"archive\"} ] } }"
+        phonegap push --deviceID APA91bE1MmeTc92igNoi5OkDWUV --service fcm --payload "{ \"data\": { \"title\": \"New Music\", \"message\": \"New music from the Foo Fighters\", \"actions\": [{ \"icon\": \"play\", \"title\": \"Play Music\", \"callback\": \"playMusic\"}, { \"icon\": \"archive\", \"title\": \"Archive\", \"callback\": \"archive\"} ] } }"
 
 
      > The Android OS will look for your icons in your projects platform/android/res/drawable folders. See [Holly's excellent tutorial](http://devgirl.org/2013/11/12/three-hooks-your-cordovaphonegap-project-needs/) if you need help with that. Icons are strictly not required for this test.
