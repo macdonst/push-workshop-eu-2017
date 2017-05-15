@@ -4,7 +4,7 @@ title: Module 2&#58; Obtaining a Registration ID
 ---
 
 ### Overview
-In order for your device to receive push notifications you will need to receive a registration ID from the remote push service be it Google Cloud Messaging (GCM) or Apple Push Notification Service (APNS). We'll learn how to register for push and report that registration ID back to our application server.
+In order for your device to receive push notifications you will need to receive a registration ID from the remote push service be it Google Cloud Messaging (GCM), Firebase Cloud Messaging (FCM) or Apple Push Notification Service (APNS). We'll learn how to register for push and report that registration ID back to our application server.
 
 ## Steps
 1. Initialize the PushNotification plugin and register an event handler for a `registration` event. Open the **www/js/my-app.js** file
