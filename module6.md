@@ -79,7 +79,7 @@ This lesson will take you through the steps required in order to setup "action b
    <img class="screenshot" src="images/push6.png"/>
    <img class="screenshot" src="images/push6-ios.png"/>
 
-5. Finally click on the 'Accept' button of the push and your app will be launched and you should see the 'Accept' alert dialog.
+5. Finally click on the 'Play' button of the push and your app will be launched and you should see the 'Play Music!' alert dialog.
 
    <img class="screenshot" src="images/push7.png"/>
    <img class="screenshot" src="images/push7-ios.png"/>
