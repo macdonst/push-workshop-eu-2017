@@ -6,14 +6,13 @@ title: Module 1&#58; Setup the project
 ### Create a new Project
 1. Create a PhoneGap project using the PhoneGap CLI. For example:
 
-        $ phonegap create pgpush --template phonegap-app-star-track
+        $ phonegap create pgpush --template https://github.com/phonegap/phonegap-app-star-track-push
 
-   We'll be using the `phonegap-app-star-track` project as our template to provide base functionality.
+   We'll be using the `phonegap-app-star-track-push` project as our template to provide base functionality.
 
 2. Navigate into the newly created project folder:
 
         $ cd pgpush
-
 
 ### Run the Initial Application
 1. Serve the app using the PhoneGap CLI. Type `$ phonegap serve`. You will receive the server address the app is being hosted on in the output received in the console (`192.168.1.11:3000` in this example):
